@@ -1,38 +1,165 @@
-.App {
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.store__wrapper {
+  display: flex;
+}
+
+.store {
+  margin: 25px auto;
+}
+
+.store__control {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.store-control__button {
+  border: none;
+  background-color: inherit;
+}
+
+.material-icons {
+  color: #6B6B6B;
+  font-size: 32px;
+}
+
+.store__cards {
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.store__card {
+  box-sizing: border-box;
+  width: 300px;
+  height: 300px;
+  padding: 25px;
+  background-color: #f5f5f5;
+  box-shadow: 5px 8px 7px #bfbfbf;
+  display: flex;
+  position: relative;
+}
+
+.store__item {
+  width: 100%;
+  padding: 20px;
+  margin-top: 25px;
+  background-color: #f5f5f5;
+  box-shadow: 5px 8px 7px #bfbfbf;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.store__item:first-child {
+  margin-top: 0;
+}
+
+.store-card__content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.store-card__header {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.store-card__name {
+  margin: 0 0 10px;
+  text-transform: uppercase;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.store-card-name__link {
+  font-weight: 600;
+  text-decoration: none;
+  color: #000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+p {
+  margin: 0;
+}
+
+.store-card__img {
+  max-width: 100%;
+}
+
+.store-item__img {
+  width: 70px;
+}
+
+.store-card__footer {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.store-card__new-price {
+  font-size: 18px;
+  color: #db5c4a;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.button {
+  padding: 10px 15px;
+  border: 1px solid #db5c4a;
+  border-radius: 25px;
+  background-color: inherit;
+  font-size: 14px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: #db5c4a;
+  cursor: pointer;
+}
+
+
+.button:hover {
+  background-color: #db5c4a;
+  color: #f5f5f5;
+}
+
+@media (max-width: 670px) {
+  .store__card:nth-child(n + 2) {
+    margin-top: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .store__item {
+    display: block;
+    text-align: center;
+  }
+
+  .store-item__prices {
+    margin: 20px 0 10px;
+  }
+
+  .store-item__add-button {
+    width: 100%;
+  }
+}
+
+@media (min-width: 671px) and (max-width: 1024px) {
+  .store__cards {
+    width: 620px;
+  }
+
+  .store__card:nth-child(n + 3) {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .store__cards {
+    width: 940px;
+  }
+
+  .store__card:nth-child(n + 4) {
+    margin-top: 20px;
   }
 }
